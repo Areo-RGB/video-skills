@@ -1,0 +1,6 @@
+﻿__pycache__/
+*.py[cod]
+/yolo*.pt
+/annotated_nvenc.mp4
+/detections.csv
+/jump_events.csv

@@ -70,3 +70,12 @@ py examples/gpu_accel.py yolo input.mp4 --model yolo11n.pt
 ```
 
 On the captured machine, FFmpeg NVENC works now. The installed PyTorch build is CPU-only, so the `benchmark` and `yolo` commands intentionally refuse to claim GPU acceleration until CUDA-enabled PyTorch is installed.
+
+### GTX 1660 optimized YOLO video analysis
+
+- `examples/yolo_video_gtx1660.py` — batched CUDA/FP16 YOLO or YOLO-Pose, frame skipping, optional ByteTrack, CSV detections/keypoints, simple jump counting, and H.264 NVENC annotated output.
+- `examples/README.md` — tuned defaults and the verified CUDA PyTorch installation command for this machine.
+
+```powershell
+py examples/yolo_video_gtx1660.py drill.mp4 --model yolo11n-pose.pt --batch 8 --skip 2 --count-jumps
+```
