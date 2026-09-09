@@ -22,3 +22,21 @@
 [submodule "llm-video-understanding/gemini-video-analysis-gist"]
 	path = llm-video-understanding/gemini-video-analysis-gist
 	url = https://gist.github.com/lockmeister/cf35914899ef0ad4c191198752761111.git
+[submodule "after-effects/engine-room-after-effects-mcp"]
+	path = after-effects/engine-room-after-effects-mcp
+	url = https://github.com/Engine-Room-Games/after-effects-mcp.git
+[submodule "after-effects/heroic-swan-after-effects-mcp"]
+	path = after-effects/heroic-swan-after-effects-mcp
+	url = https://github.com/HeroicSwan/after-effects-mcp.git
+[submodule "after-effects/ishu86-after-effects-mcp"]
+	path = after-effects/ishu86-after-effects-mcp
+	url = https://github.com/ishu86/after-effects-mcp.git
+[submodule "after-effects/ae-agent-skills"]
+	path = after-effects/ae-agent-skills
+	url = https://github.com/yumehiko/ae-agent-skills.git
+[submodule "after-effects/terminalskills"]
+	path = after-effects/terminalskills
+	url = https://github.com/TerminalSkills/skills.git
+[submodule "after-effects/adobe-agent-skills"]
+	path = after-effects/adobe-agent-skills
+	url = https://github.com/aedev-tools/adobe-agent-skills.git
