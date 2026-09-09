@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """GTX 1660-tuned YOLO video analysis example.
 
 Fast path: batched YOLO/YOLO-Pose inference on CUDA with FP16 and frame skipping.
@@ -341,4 +341,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
