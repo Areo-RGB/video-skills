@@ -55,3 +55,18 @@ git submodule update --init --recursive
 ## Upstream / licensing
 
 This repository is an aggregation. Upstream projects remain linked as submodules where practical, preserving their own history and licenses. The two NVIDIA skills and the single SkillsBench skill are vendored as focused folders to avoid pulling very large source trees; their upstream commit references and license files are included alongside them.
+## GPU acceleration example
+
+This repo includes a machine-specific reference for `DESKTOP-FRP61Q7` and a reusable Python example:
+
+- `hardware/DESKTOP-FRP61Q7.md` — GTX 1660 / CUDA / FFmpeg / Python capability snapshot.
+- `examples/gpu_accel.py` — diagnostics, PyTorch CUDA benchmark, Ultralytics YOLO GPU inference, and FFmpeg NVENC transcoding.
+
+```powershell
+py examples/gpu_accel.py info
+py examples/gpu_accel.py transcode input.mp4 output.mp4
+py examples/gpu_accel.py benchmark
+py examples/gpu_accel.py yolo input.mp4 --model yolo11n.pt
+```
+
+On the captured machine, FFmpeg NVENC works now. The installed PyTorch build is CPU-only, so the `benchmark` and `yolo` commands intentionally refuse to claim GPU acceleration until CUDA-enabled PyTorch is installed.
