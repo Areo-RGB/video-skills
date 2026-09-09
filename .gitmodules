@@ -1,0 +1,24 @@
+[submodule "video-analysis/video-analyzer-skill"]
+	path = video-analysis/video-analyzer-skill
+	url = https://github.com/bsisduck/video-analyzer-skill.git
+[submodule "video-analysis/video-expert-analyzer"]
+	path = video-analysis/video-expert-analyzer
+	url = https://github.com/ALBEDO-TABAI/video-expert-analyzer.git
+[submodule "computer-vision/image-processing-skills"]
+	path = computer-vision/image-processing-skills
+	url = https://github.com/aeren23/image-processing-skills.git
+[submodule "computer-vision/roboflow-computer-vision-skills"]
+	path = computer-vision/roboflow-computer-vision-skills
+	url = https://github.com/roboflow/computer-vision-skills.git
+[submodule "yolo-detection-tracking/ultralytics-skills"]
+	path = yolo-detection-tracking/ultralytics-skills
+	url = https://github.com/ultralytics/skills.git
+[submodule "video-editing/ffmpeg-skill"]
+	path = video-editing/ffmpeg-skill
+	url = https://github.com/kajisho5/ffmpeg-skill.git
+[submodule "video-editing/mcp-video-editing"]
+	path = video-editing/mcp-video-editing
+	url = https://github.com/mfortne/mcp-video-editing.git
+[submodule "llm-video-understanding/gemini-video-analysis-gist"]
+	path = llm-video-understanding/gemini-video-analysis-gist
+	url = https://gist.github.com/lockmeister/cf35914899ef0ad4c191198752761111.git
