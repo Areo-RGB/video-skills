@@ -1,6 +1,8 @@
 # video-skills
 
-Curated collection of agent/LLM skills and plugins for video editing, video analysis, computer vision, YOLO, OpenCV, pose estimation, action recognition, and multimodal video understanding.
+Curated collection of agent/LLM skills and plugins for video editing, video analysis, computer vision, YOLO, OpenCV, pose estimation, action recognition, multimodal video understanding, and After Effects automation.
+
+> `ae` branch: adds After Effects MCP servers, agent skills, and a local analysis-data → editable AE overlay workflow.
 
 ## Topics
 
@@ -27,6 +29,15 @@ Curated collection of agent/LLM skills and plugins for video editing, video anal
 - `llm-video-understanding/gemini-video-analysis-gist` — Gemini-oriented native video analysis skill with yt-dlp/FFmpeg preparation.
 - `llm-video-understanding/gemini-video-understanding-skillsbench` — SkillsBench Gemini video-understanding skill, including configurable frame sampling for visual analysis.
 
+### After Effects / LLM automation (`ae` branch)
+- `after-effects/engine-room-after-effects-mcp` — preferred full AE MCP control surface; project/layer/text/shape/animation/render/inspection/batch/JSX workflows.
+- `after-effects/heroic-swan-after-effects-mcp` — AE MCP with useful deterministic scene-layout and visual-QA ideas.
+- `after-effects/ishu86-after-effects-mcp` — compact AE MCP implementation with animation and render/inspection tooling.
+- `after-effects/ae-agent-skills` — dedicated After Effects agent skills.
+- `after-effects/terminalskills` — large skill collection containing an After Effects skill/reference.
+- `after-effects/adobe-agent-skills` — Adobe automation skills and ExtendScript/project-query patterns.
+- `after-effects/overlay-from-analysis` — local skill for converting Python/MediaPipe/RTMPose analysis into editable AE counters, labels and tracked overlays.
+
 ## Useful entry points
 
 - OpenCV/YOLO pipeline: `computer-vision/image-processing-skills/skills/06-yolo-pipeline/SKILL.md`
@@ -37,6 +48,27 @@ Curated collection of agent/LLM skills and plugins for video editing, video anal
 - FFmpeg editing: `video-editing/ffmpeg-skill/SKILL.md`
 - MCP video editing: `video-editing/mcp-video-editing/skills/mcp-video/SKILL.md`
 - General video analysis: `video-analysis/video-analyzer-skill/SKILL.md`
+- AE overlay handoff: `after-effects/overlay-from-analysis/SKILL.md`
+- AE resource overview: `after-effects/README.md`
+
+## Recommended AE overlay architecture
+
+```text
+Python / CV analysis
+├── MediaPipe / RTMPose
+├── athlete tracking
+├── jump/event detection
+└── overlay_data.json
+          ↓
+After Effects MCP / JSX
+├── counters
+├── athlete labels
+├── tracked badges
+├── animation / styling
+└── final render
+```
+
+Keep Python responsible for analysis truth; keep After Effects responsible for final presentation.
 
 ## Clone
 
@@ -46,15 +78,23 @@ Most upstream projects are Git submodules, so clone with:
 git clone --recurse-submodules https://github.com/Areo-RGB/video-skills.git
 ```
 
+Clone the AE branch directly with:
+
+```bash
+git clone --branch ae --recurse-submodules https://github.com/Areo-RGB/video-skills.git
+```
+
 For an existing clone:
 
 ```bash
+git switch ae
 git submodule update --init --recursive
 ```
 
 ## Upstream / licensing
 
 This repository is an aggregation. Upstream projects remain linked as submodules where practical, preserving their own history and licenses. The two NVIDIA skills and the single SkillsBench skill are vendored as focused folders to avoid pulling very large source trees; their upstream commit references and license files are included alongside them.
+
 ## GPU acceleration example
 
 This repo includes a machine-specific reference for `DESKTOP-FRP61Q7` and a reusable Python example:
